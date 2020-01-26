@@ -78,13 +78,17 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="{{route('logout')}}" class="nav-link" onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
               <i class="nav-icon fa fa-th"></i>
               <p>
-                Widgets
+                Cerrar Sesion
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+          </form>
           </li>
          
           
